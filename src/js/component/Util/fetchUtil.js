@@ -26,7 +26,7 @@ function fetchUtil(method,url, params) {
     var _body=JSON.stringify(paramsObj);
     return new Promise(function (resolve, reject) {
         fetch(url, {
-            credentials: 'include',
+            credentials: 'include',//是否携带cockie
             mode: 'cors',//跨域请求
             headers: {
                 "Content-type": "application/json; charset=utf-8",

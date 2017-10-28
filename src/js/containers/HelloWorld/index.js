@@ -10,11 +10,24 @@
  */
 
 import React from 'react';
+import {browserHistory } from 'react-router'
+import Data from '../../component/Common/Data/data'
 
 export default class HelloWorld extends React.Component {
+  click(){
+    browserHistory.push({
+      pathname:"/chart"
+    })
+  }
   render() {
     return (
-      <div>hello world!</div>
+      <div>
+        <p onClick={this.click.bind(this)}>hello world!</p>
+          <Data/>
+        <div>
+          {this.props.children}
+        </div>
+      </div>
     );
   }
 }
